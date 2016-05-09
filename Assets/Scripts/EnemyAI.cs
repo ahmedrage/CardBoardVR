@@ -12,14 +12,13 @@ public class Question {
 }
 
 public class EnemyAI : MonoBehaviour {
-	public Question[] questions = new Question[10];
+	public Question[] questions;
 	public string[] test;
 	public int score;
 	public int scoreForCorrect;
 	public int penaltyForIncorrect;
-	int currentQuestionNumber;
+	public int currentQuestionNumber;
 	string currentQuestionText;
-
 
 	public Text questionText;
 	public Text scoreText;
@@ -41,6 +40,8 @@ public class EnemyAI : MonoBehaviour {
 			nextQuestion ();
 		}
 
+
+
 	}
 
 	void questionTrue () {
@@ -60,8 +61,10 @@ public class EnemyAI : MonoBehaviour {
 	}
 
 	void nextQuestion() {
-		if (currentQuestionNumber < questions.Length) {
+		if (currentQuestionNumber < questions.Length -1) {
 			currentQuestionNumber++;
+		} else {
+			print ("No more questions!!!! Everyody panic");
 		}
 	}
 }
