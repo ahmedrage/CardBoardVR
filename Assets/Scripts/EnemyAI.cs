@@ -22,8 +22,11 @@ public class EnemyAI : MonoBehaviour {
 
 	public Text questionText;
 	public Text scoreText;
+
+	public pointer VR;
 	// Use this for initialization
 	void Start () {
+		VR = GameObject.FindGameObjectWithTag ("Head").GetComponent<pointer> ();
 	}
 
 	// Update is called once per frame
@@ -31,11 +34,11 @@ public class EnemyAI : MonoBehaviour {
 		scoreText.text = score.ToString ();
 		currentQuestionText = questions [currentQuestionNumber].theQuestion;
 		questionText.text = currentQuestionText;
-		if (Input.GetButtonDown("Fire1")) {
+		if (VR.questionAnswered == true && VR.yes == true) {
 			questionTrue();
 			nextQuestion ();
 		}
-		if (Input.GetButtonDown("Fire2")) {
+		if (VR.questionAnswered == true && VR.no == true) {
 			questionFalse();
 			nextQuestion ();
 		}

@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 
 Project("{F1DD7708-E5C9-22AE-DF83-AB524821E9EA}") = "CardBoardProj", "Assembly-CSharp.csproj", "{87D25352-2A57-C4D9-48D7-8DB8000C9A56}"
 EndProject
+Project("{F1DD7708-E5C9-22AE-DF83-AB524821E9EA}") = "CardBoardProj", "Assembly-CSharp-Editor.csproj", "{9ED42625-8E67-487A-25FB-24162BA43ABD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{87D25352-2A57-C4D9-48D7-8DB8000C9A56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87D25352-2A57-C4D9-48D7-8DB8000C9A56}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87D25352-2A57-C4D9-48D7-8DB8000C9A56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ED42625-8E67-487A-25FB-24162BA43ABD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ED42625-8E67-487A-25FB-24162BA43ABD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ED42625-8E67-487A-25FB-24162BA43ABD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ED42625-8E67-487A-25FB-24162BA43ABD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
