@@ -13,11 +13,14 @@ public class pointer : MonoBehaviour {
 	public bool yes;
 	public bool no;
 	public bool answered;
+
+	EnemyAI enemyScript;
 	// Use this for initialization
 	void Start ()
 	{
 		timeReset = timeToAnswer;
-		pointRotate = transform.FindChild ("point"); // Gets the transform of the point.
+		enemyScript = GameObject.Find ("Enemy").GetComponent<EnemyAI> ();
+		//pointRotate = transform.FindChild ("point"); // Gets the transform of the point.
 	}
 	
 	// Update is called once per frame
@@ -25,6 +28,8 @@ public class pointer : MonoBehaviour {
 	{
 		Raycasting ();
 		Interaction ();
+		enemyScript.response1Hover = yes;
+		enemyScript.response2Hover = no;
 	}
 
 	void Raycasting () // Controls the raycasts

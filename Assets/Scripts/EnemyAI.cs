@@ -7,13 +7,14 @@ using UnityEngine.UI;
 public class Question {
 	//[SerializeField]
 	public string theQuestion;
+	public string response1;
+	public string response2;
 	public bool isYes;
 
 }
 
 public class EnemyAI : MonoBehaviour {
 	public Question[] questions;
-	public string[] test;
 	public int score;
 	public int scoreForCorrect;
 	public int penaltyForIncorrect;
@@ -23,6 +24,11 @@ public class EnemyAI : MonoBehaviour {
 	public Text questionText;
 	public Text scoreText;
 
+	public Text response1Text;
+	public Text response2Text;
+
+	public bool response1Hover;
+	public bool response2Hover;
 	public pointer VR;
 	// Use this for initialization
 	void Start () {
@@ -31,6 +37,9 @@ public class EnemyAI : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
+
+		print (questions [0].theQuestion);
 		scoreText.text = score.ToString ();
 		currentQuestionText = questions [currentQuestionNumber].theQuestion;
 		questionText.text = currentQuestionText;
@@ -43,7 +52,17 @@ public class EnemyAI : MonoBehaviour {
 			nextQuestion ();
 		}
 
+		if (response1Hover == true) {
+			response1Text.text = questions [currentQuestionNumber].response1;
+		} else {
+			response1Text.text = "";
+		}
 
+		if (response2Hover == true) {
+			response2Text.text = questions [currentQuestionNumber].response2;
+		} else {
+			response2Text.text = "";
+		}
 
 	}
 
