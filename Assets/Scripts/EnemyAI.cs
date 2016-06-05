@@ -2,6 +2,7 @@
 using System.Collections;
 using System;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class Question {
@@ -86,7 +87,8 @@ public class EnemyAI : MonoBehaviour {
 		if (currentQuestionNumber < questions.Length -1) {
 			currentQuestionNumber++;
 		} else {
-			print ("No more questions!!!! Everyody panic");
+			SceneManager.LoadScene ("gameScene");
+
 		}
 	}
 }
